@@ -5,7 +5,7 @@
 	use a namespace for the node in which we are running. -->
 
   <!-- change the output directory and prefix if this is not where yours is mapped -->
-  <arg name="bagfileout" default="/ros/catkin_ws/profspacegap"/>
+  <arg name="bagfileout" default="/ros/catkin_ws/rfkjr"/>
 
   <!-- sets the initial position of the lead car. -->
   <param name="/leadcar/x0" type="double" value="40.0" />
@@ -32,7 +32,7 @@
   <group ns="egocar">
 	  <node pkg="carsimplesimulink" type="carsimplesimulink" name="carsimplesimulink_node">
    	  </node>
-	  <node pkg="profspacegap" type="profspacegap" name="profspacegap_node">
+	  <node pkg="rfkjr" type="rfkjr" name="rfkjr_node">
 	  	<remap from="/lead_dist" to="/egocar/lead_dist" />
 		<remap from="/cmd_accel" to="/egocar/cmd_accel" />
 	  </node>
